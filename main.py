@@ -1,16 +1,15 @@
-# This is a sample Python script.
+from scrape_manager import scrape_top_song_titles
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+TEST_DATE = '2010-12-31'
 
 
-# Press the green button in the gutter to run the script.
+def main(date_to_travel):
+    top_songs_titles = scrape_top_song_titles(date_to_travel)
+    return top_songs_titles
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    # user_date = input("Enter date which you want to travel to (YYYY-MM-DD):")
+    user_date = TEST_DATE
+    print(main(user_date))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
